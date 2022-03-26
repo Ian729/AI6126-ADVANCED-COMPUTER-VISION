@@ -13,12 +13,12 @@ A5: Try `python tools/print_config.py [config_path]`.
 Q6: I saved the predictions in png images. But they look almost pure black images when opened with a picture browser. Is this as expected?  
 A6: Yes, the saved images should be 512x512 and have integer values in [0, 18].  
 Q7: I fail to run the provided `baseline.py` after installing MMSegmentation. What could be the problem?  
-A1: MMSegmentation doesn't support the CelebA-Mask dataset out of the box. You need to write a customized data loader for it. Please refer to https://github.com/open-mmlab/mmsegmentation/blob/master/mmseg/datasets/voc.py for an example.  
+A7: MMSegmentation doesn't support the CelebA-Mask dataset out of the box. You need to write a customized data loader for it. Please refer to https://github.com/open-mmlab/mmsegmentation/blob/master/mmseg/datasets/voc.py for an example.  
 Q8: I notice that, in the CelebA-Mask dataset, some necklace pixels are mistakenly annotated as skin or background. Is this normal?  
-A2: Yes, after double checking with the original CelebA-Mask dataset, we confirm that some samples are mislabeled. You don't need to relabel the data. The provided baseline doesn’t particularly deal with the necklace problem and gets around 8.7 IoU for the necklace class.  
+A8: Yes, after double checking with the original CelebA-Mask dataset, we confirm that some samples are mislabeled. You don't need to relabel the data. The provided baseline doesn’t particularly deal with the necklace problem and gets around 8.7 IoU for the necklace class.  
 Q9: Are we allowed to use models pre-trained on the ImageNet-21K?  
-A3: No, ImageNet-21K is a much larger dataset than the commonly used ImageNet (a.k.a. ImageNet-1K).  
+A9: No, ImageNet-21K is a much larger dataset than the commonly used ImageNet (a.k.a. ImageNet-1K).  
 Q10: I plan to do this project on Google Colab. How should I get started?  
-A4: Related to Q1, since you at least need to implement the data loader of CelebA-Mask, you can no longer `git clone` from the original MMSegmentation repo. Instead, you should fork the MMSegmentation, modify the code, push the modifications to your fork, and `git clone` from the forked repo.  
+A10: Related to Q1, since you at least need to implement the data loader of CelebA-Mask, you can no longer `git clone` from the original MMSegmentation repo. Instead, you should fork the MMSegmentation, modify the code, push the modifications to your fork, and `git clone` from the forked repo.  
 Q11: How can I generate the predictions for submission?  
-A5: Please refer to https://github.com/open-mmlab/mmsegmentation/blob/master/demo/image_demo.py#L29. Instead of feeding the `result` into `show_result_pyplot`, you should save it as a png file.  
+A11: Please refer to https://github.com/open-mmlab/mmsegmentation/blob/master/demo/image_demo.py#L29. Instead of feeding the `result` into `show_result_pyplot`, you should save it as a png file.  
