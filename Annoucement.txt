@@ -1,0 +1,238 @@
+Submission to CodaLab
+Posted on: Friday, March 25, 2022 10:44:37 AM SGT
+
+Dear Students,
+
+The TAs notice some students submitted the results to CodaLab, but their names are not shown on the leaderboard.
+
+Please unhide your entries so that our TAs can verify your best results. And please check if your best results are already shown on the leaderboard.
+
+Students with the following username didn't fill in their information in Google Form: GLZ, liuq, pt, RHY, Yang.
+
+Please fill in the form below before the deadline. Otherwise, we will not be able to link your results with you.
+
+The Google Form link:
+
+
+2022 Spring NTU AI6126 Project 1: CelebAMask Face Parsing
+You need to submit some basic information of your account in CodaLab.
+Google Docs
+Cavan
+
+Posted by: SCSE Chen Change Loy
+
+Posted to: 21S2-AI6126-ADVANCED COMPUTER VISION
+
+Finding Group Member
+Posted on: Thursday, March 24, 2022 2:06:03 PM SGT
+
+Dear Students,
+
+Some of you told me that you have difficulties finding another group member for the reading and presentation assignment.
+
+You can send us an email (ai6126@e.ntu.edu.sg) if you need a member. I will help to pair you up.
+
+Or you can post your request in "Forming Group for Reading" on the Discussion Board.
+
+Cavan
+
+Posted by: SCSE Chen Change Loy
+
+Posted to: 21S2-AI6126-ADVANCED COMPUTER VISION
+
+Submission of Large Checkpoint File
+Posted on: Tuesday, March 22, 2022 10:10:06 AM SGT
+
+Dear students,
+
+Some of you may have problem submitting your checkpoint (.pth) to NTULearn. 
+
+If this happens to you, you can upload the checkpoint to OneDrive, Dropbox or GoogleDrive and include the link in your report and readme file. We will verify the timestamp of the checkpoint file.
+
+Cavan
+
+Posted by: SCSE Chen Change Loy
+
+Posted to: 21S2-AI6126-ADVANCED COMPUTER VISION
+
+FAQ for Project 1
+Posted on: Monday, March 21, 2022 9:33:02 AM SGT
+
+Dear Students,
+
+The TAs have prepared an updated list of FAQ for project 1. Q7-Q11 are new.  You can check the FAQ under "Information" in the future.
+
+
+
+FAQ:
+
+Q1: I notice that there are train/val/test splits of the provided dataset. Which ones can be used for training and which ones cannot?
+A1: You can use the train and val splits to train your model, but training on the test split, e.g., pseudo labeling self-training, is strictly prohibited.
+
+Q2: I notice that the original CelebA-Mask dataset contains 30K images. Are we allowed to train on it?
+A2: No, and please also avoid downloading dataset from the official CelebA-Mask repo. You should only use the link in the handout to download data.
+
+Q3: I'm new to MMSegmentation and I'm confused about the config file naming and the meaning of each config field. Where can I find related tutorials?
+A3: https://mmsegmentation.readthedocs.io/en/latest/tutorials/config.html
+
+Q4: Related to Q3. I'm worried about mistakenly loading weights pre-trained on other datasets. How can I make sure I initialize my model with only ImageNet pre-trained weights?
+A4: See this example config: https://mmsegmentation.readthedocs.io/en/latest/tutorials/config.html#an-example-of-pspnet. Look at line 4, `pretrained='open-mmlab://resnet50_v1c'`, and this field indicates which weights you are using for initialization. Other valid options can be found at https://github.com/open-mmlab/mmcv/blob/master/mmcv/model_zoo/open_mmlab.json (You should not download weights from the MMSegmentation model zoo because they are trained on segmentation datasets, such as Cityscapes). Besides, make sure the `load_from` and `resume_from` are None.
+
+Q5: The config file of MMSegmentation has hierarchical inheritance specified with `_base_`. How can I unroll the inheritance and inspect the full config?
+A5: Try `python tools/print_config.py [config_path]`.
+
+Q6: I saved the predictions in png images. But they look almost pure black images when opened with a picture browser. Is this as expected?
+A6: Yes, the saved images should be 512x512 and have integer values in [0, 18].
+
+Q7: I fail to run the provided `baseline.py` after installing MMSegmentation. What could be the problem?
+A1: MMSegmentation doesn't support the CelebA-Mask dataset out of the box. You need to write a customized data loader for it. Please refer to https://github.com/open-mmlab/mmsegmentation/blob/master/mmseg/datasets/voc.py for an example.
+
+Q8: I notice that, in the CelebA-Mask dataset, some necklace pixels are mistakenly annotated as skin or background. Is this normal?
+A2: Yes, after double checking with the original CelebA-Mask dataset, we confirm that some samples are mislabeled. You don't need to relabel the data. The provided baseline doesn’t particularly deal with the necklace problem and gets around 8.7 IoU for the necklace class.
+
+Q9: Are we allowed to use models pre-trained on the ImageNet-21K?
+A3: No, ImageNet-21K is a much larger dataset than the commonly used ImageNet (a.k.a. ImageNet-1K).
+
+Q10: I plan to do this project on Google Colab. How should I get started?
+A4: Related to Q1, since you at least need to implement the data loader of CelebA-Mask, you can no longer `git clone` from the original MMSegmentation repo. Instead, you should fork the MMSegmentation, modify the code, push the modifications to your fork, and `git clone` from the forked repo.
+
+Q11: How can I generate the predictions for submission?
+A5: Please refer to https://github.com/open-mmlab/mmsegmentation/blob/master/demo/image_demo.py#L29. Instead of feeding the `result` into `show_result_pyplot`, you should save it as a png file.
+
+Posted by: SCSE Chen Change Loy
+
+Posted to: 21S2-AI6126-ADVANCED COMPUTER VISION
+
+Project 1 Test Data Released
+Posted on: Friday, March 18, 2022 12:00:00 AM SGT
+
+Dear Students,
+
+The project 1 test data is released as follows:
+
+Link to Test Data
+
+Please be reminded that the deadline for final submission is 25 March 2022 11:59 PM SGT
+
+All the best.
+
+Cavan
+
+Posted by: SCSE Chen Change Loy
+
+Posted to: 21S2-AI6126-ADVANCED COMPUTER VISION
+
+Paper Reading and Presentation
+Posted on: Friday, March 18, 2022 9:30:00 PM SGT
+
+Dear all,
+
+As mentioned at the beginning of this course, you will need to form a group of two, study a real computer vision/deep learning paper, and make a presentation.
+
+
+
+Steps:
+
+1. Choose one paper from the list
+
+https://www.dropbox.com/s/6w531cfzu2zs89q/reading_list.pdf?dl=0 
+
+2. Report your selection by 22 March 2022. Fill in your selection and the name of members (uo to two members in a group) using the form below. Only one member from a group needs to fill in the information.
+
+https://forms.gle/fikX2BEeYkoTfZb17 
+
+3. Prepare your slides.
+
+4. Record your presentation in MP4 with a quality of 720p. Store it on cloud like Google Drive or Dropbox. See here for more details on how to record your presentation.
+
+5. Send ai6126@e.ntu.edu.sg with the link to your recorded presentation by 11:59 PM, 14 Apr 2022. Include the name of team members in the email.
+
+
+
+Tips for presentation:
+
+15 minutes per talk. Try to divide the talk equally between the members.
+Study and find more related work; find connections
+Focus presentation on ideas; not too detailed
+
+FAQ:
+
+Can I conduct this activity alone without finding another group member? Ans: Yes, you can do that. Just fill up your own name and leave another with 'NA' in the online form.
+Can I use existing slides on the Internet? Ans: We do not encourage that. You may borrow figures in the paper but you need to prepare your own slides.
+More FAQ on the Information Page on this course site.
+
+Posted by: SCSE Chen Change Loy
+
+Posted to: 21S2-AI6126-ADVANCED COMPUTER VISION
+
+Reminder and FAQ of Project 1
+Posted on: Monday, March 21, 2022 9:26:29 AM SGT
+
+Dear Students,
+
+A gentle reminder:
+
+Release of test set: 18 March 2022 12:00 AM SGT
+Due: 25 March 2022 11:59 PM SGT
+
+You need to register on CodaLab and fill in your username in Google Form before the test phase starts. Some of you only registered on CodaLab but forget to fill in the Google Form, while some of you only filled in the Goole Form. Do check you did both of them to successfully register your account.
+
+FAQ:
+
+Q1: I notice that there are train/val/test splits of the provided dataset. Which ones can be used for training and which ones cannot?
+A1: You can use the train and val splits to train your model, but training on the test split, e.g., pseudo labeling self-training, is strictly prohibited.
+
+Q2: I notice that the original CelebA-Mask dataset contains 30K images. Are we allowed to train on it?
+A2: No, and please also avoid downloading dataset from the official CelebA-Mask repo. You should only use the link in the handout to download data.
+
+Q3: I'm new to MMSegmentation and I'm confused about the config file naming and the meaning of each config field. Where can I find related tutorials?
+A3: https://mmsegmentation.readthedocs.io/en/latest/tutorials/config.html
+
+Q4: Related to Q3. I'm worried about mistakenly loading weights pre-trained on other datasets. How can I make sure I initialize my model with only ImageNet pre-trained weights?
+A4: See this example config: https://mmsegmentation.readthedocs.io/en/latest/tutorials/config.html#an-example-of-pspnet. Look at line 4, `pretrained='open-mmlab://resnet50_v1c'`, and this field indicates which weights you are using for initialization. Other valid options can be found at https://github.com/open-mmlab/mmcv/blob/master/mmcv/model_zoo/open_mmlab.json (You should not download weights from the MMSegmentation model zoo because they are trained on segmentation datasets, such as Cityscapes). Besides, make sure the `load_from` and `resume_from` are None.
+
+Q5: The config file of MMSegmentation has hierarchical inheritance specified with `_base_`. How can I unroll the inheritance and inspect the full config?
+A5: Try `python tools/print_config.py [config_path]`.
+
+Q6: I saved the predictions in png images. But they look almost pure black images when opened with a picture browser. Is this as expected?
+A6: Yes, the saved images should be 512x512 and have integer values in [0, 18].
+
+Click the "Information" button at the left menu pane on NTULearn course site for more FAQ.
+
+Posted by: SCSE Chen Change Loy
+
+Posted to: 21S2-AI6126-ADVANCED COMPUTER VISION
+
+Welcome to AI6126: Advanced Computer Vision
+Posted on: Thursday, January 13, 2022 10:53:33 AM SGT
+
+Dear All,
+
+Welcome to AI6126: Advanced Computer Vision!
+
+Please find the course notes and labs/tutorials under "Content" on NTULearn. The notes for each week will be made available a few days before the lecture.
+
+In this semester, we will conduct our lecture in hybrid mode. It means the lecture will be delivered in LT4. It will also be broadcast through Zoom at the same time for those who cannot attend the class in person. Attending face-to-face classes is still the best way to interact with your classmates and lecturer.
+
+The lectures will be held on Fridays 6:30 pm - 9:30 pm (begin tomorrow). 
+
+Face-to-face lecture: LT4
+
+Zoom: Check the "Zoom Links" in the left panel for access or use this link
+https://ntu-sg.zoom.us/j/94511086736
+
+Meeting ID: 945 1108 6736
+Passcode: ai6126
+
+The Zoom recording will be posted in "Course Media" after the lecture.
+
+For those who attend the face-to-face lecture, please follow the advisory note announced by the university.
+
+We look forward to meeting you all in AI6216. I wish you all an exciting and fruitful jorney through AI6126!
+
+Cheers,
+Loy Chen Change and Liu Ziwei
+
+Posted by: SCSE Chen Change Loy
+
+Posted to: 21S2-AI6126-ADVANCED COMPUTER VISION

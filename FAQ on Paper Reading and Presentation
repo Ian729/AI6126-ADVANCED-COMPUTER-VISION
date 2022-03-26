@@ -1,0 +1,12 @@
+FAQ on Paper Reading and Presentation
+Q: Focus presentation on ideas; not too detailed  - >  Does it mean that we have to talk about all the previous generation model architectures till the current one ( the paper that we pick )? For example, if we choose a topic related to object detection, do we need to talk about all the other object detection technique besides the one in the selected paper?
+A: Instead of covering all previous methods, I am looking at the capability to summarize relevant works into a few large groups and argue their pros and cons. And state why the method you are presenting stands out.
+Q: What exactly has to be included in the presentation if we don’t go into the technicalities of it?
+A: A typical presentation would include motivation, related work, methodology, results, conclusion/discussion. You can still present the method and important equations. But you may want to exclude trivial details like how many layers are used etc.
+Q: What exactly are we being graded on?
+A: The organization and clarity of your talk, the quality of the presentation material, and your thought beyond the paper.
+
+Q: Can I conduct this activity alone without finding another group member? 
+A: Yes, you can do that. Just fill up your own name and leave another with 'NA' in the online form. But you still need to present for 15 minutes so that you can better cover the content of the paper.
+Q: Can I use existing slides on the Internet? 
+A: We do not encourage that. You may borrow figures in the paper but you need to prepare your own slides.
